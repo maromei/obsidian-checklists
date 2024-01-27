@@ -1,0 +1,15 @@
+{
+    "name": "Typescript - NodeJS",
+    "build": {
+        "context": "..",
+        "dockerfile": "dockerfile"
+    },
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": []
+        }
+    },
+    "initializeCommand": "",
+    "runArgs": []
+}

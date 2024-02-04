@@ -21,3 +21,15 @@ data.json
 
 # Exclude macOS Finder (System Explorer) View States
 .DS_Store
+
+# workspace.json tries to track the state the user views the vault in
+# it changes too often and generally leads to 
+# merge conflicts. Obsidian auto generates it anyway again
+# when the vault is opened
+test_vault/.obsidian/workspace.json
+
+# we ignore our plugin, since the test vault is upposed to 
+# always receive the current code state as the plugin
+# --> use the scripts/copy_to_test_vault.sh for that
+# However, we do want to keep track of the other plugins
+test_vault/.obsidian/plugins/checklists

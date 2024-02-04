@@ -2,8 +2,11 @@
 
 vault_path=test_vault/.obsidian/plugins/checklists
 
-# incase the plugin directory does not exist yet
+if [ -d "$vault_path" ]; then
+    rm -r $vault_path
+fi
+
 mkdir -p $vault_path
 
-cp -r build/*.js $vault_path/
-cp manifest.json $vault_path/
+cp -r build/* $vault_path/
+cp manifest.json $vault_path/manifest.json
